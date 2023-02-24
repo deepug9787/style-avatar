@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Style Avatar</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <main>
+            <h1 class="visually-hidden">Style Avatar</h1>
+
+            <section class="user-profile">
+                <h2 class="visually-hidden">User Profile Info</h2>
+                <div class="top"></div>
+                <div class="user-profile-content">
+                    <img alt="user profile photo" />
+                    <span class="username">r/who_am_i</span>
+                    <button>Style Avatar</button>
+                    <div class="user-profile-info">
+                        <div class="user-profile-info-item">
+                            <span>Karma</span>
+                            <span>1000</span>
+                        </div>
+
+                        <div class="user-profile-info-item">
+                            <span>Cake Day</span>
+                            <span>Jan 2020</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="choose-avatar-type">
+                <div class="close-btn-wrap">
+                    <button class="close-btn">
+                        <img src="img/close-btn.png" alt="Close" />
+                    </button>
+                </div>
+
+                <h2>Choose your style</h2>
+
+                <div class="avatar-type-wrap"></div>
+            </section>
+
+            <template id="avatar-type-template">
+                <figure>
+                    <img src="" alt="" />
+                    <figcaption></figcaption>
+                </figure>
+            </template>
+
+            <section class="customize-look">
+                <div class="close-btn-wrap">
+                    <button class="close-btn">
+                        <img src="img/close-btn.png" alt="Close" />
+                    </button>
+                </div>
+
+                <h2>Customize your look</h2>
+
+                <div class="customize-look-wrap">
+                    <div class="customize-look-options"></div>
+                    <div class="final-look">
+                        <img src="" alt="" />
+                    </div>
+                    <button id="full-look-btn">Get Full Look</button>
+                    <button id="save-look-btn">Save Look</button>
+                    <div class="message"></div>
+                </div>
+
+                <div class="go-back-wrap">
+                    <a href="#" class="go-back">
+                        <img src="img/arrow.svg" alt="Go back" />
+                        <span>Go Back</span>
+                    </a>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
