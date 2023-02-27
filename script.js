@@ -83,6 +83,8 @@ function generateCustomizeLookOptions(avatarType) {
     for (const customizeImgType of customizeLookImgTypes) {
         let img = document.createElement("img");
         img = setAvatarImgSrc(img, avatarType, customizeImgType);
+        img.setAttribute("width", "130");
+        img.setAttribute("height", "170");
         customizeLookOptions.append(img);
     }
 
