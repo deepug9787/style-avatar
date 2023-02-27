@@ -15,7 +15,6 @@ const customizeLookOptions = customizeLook.querySelector(".customize-look-option
 const finalLookImg = customizeLook.querySelector(".final-look > img");
 const fullLookBtn = document.querySelector("#full-look-btn");
 const saveLookBtn = document.querySelector("#save-look-btn");
-const messageEl = customizeLook.querySelector(".message");
 const goBackBtn = document.querySelector(".go-back");
 const customizeLookImgTypes = ["bottom", "center", "top"];
 const defaultFinalLookImg = "base";
@@ -105,11 +104,6 @@ function updateFinalLookImg() {
     setAvatarImgSrc(finalLookImg, avatarType, finalLookImgName);
 }
 
-function showMessage(message) {
-    messageEl.textContent = message;
-    messageEl.style.display = "block";
-}
-
 function init() {
     setUserProfileImg();
     showActiveSection(userProfile);
@@ -126,7 +120,6 @@ avatarTypeWrap.addEventListener("click", function (e) {
     showActiveSection(customizeLook);
     generateCustomizeLookOptions(avatarType);
     setAvatarImgSrc(finalLookImg, avatarType, defaultFinalLookImg);
-    messageEl.style.display = "none";
 });
 
 customizeLookOptions.addEventListener("click", function (e) {
@@ -146,7 +139,7 @@ fullLookBtn.addEventListener("click", function () {
 
 saveLookBtn.addEventListener("click", function () {
     localStorage.setItem("user-profile-img", finalLookImg.getAttribute("src"));
-    showMessage("Your profile picture has been updated!");
+    location.reload();
 });
 
 goBackBtn.addEventListener("click", () => {
